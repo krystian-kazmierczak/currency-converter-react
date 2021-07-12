@@ -7,7 +7,7 @@ const Footer = () => (
     </p>
     <p className="paragraph--smaller">
       Kurs pochodzą z&nbsp;Tabeli NBP nr&nbsp;084/A/NBP/2021 z&nbsp;dnia
-      2021-05-04
+      09.07.2021
     </p>
     <p className="paragraph--smaller paragraph--centered">
       &copy; 2021 Krystian Kaźmierczak

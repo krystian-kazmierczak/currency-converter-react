@@ -1,8 +1,7 @@
-import { useState } from "react";
 import "./style.css";
 
-const Input = () => {
-    const [amount, setAmount] = useState("");
+const Input = ({amount, setAmount}) => {
+
   return (
     <input
               className="form__input"
