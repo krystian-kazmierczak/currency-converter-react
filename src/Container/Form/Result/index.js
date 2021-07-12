@@ -2,11 +2,11 @@ import "./style.css";
 
 const Result = ({ result }) => (
   <p className="paragraph">
-    {result !== undefined && (
+    {!!result && (
       <>
-        {result.sourceAmount.toFixed(2)} PLN =&nbsp;
+        {Number(result.sourceAmount).toFixed(2)}&nbsp;PLN ={" "}
         <strong>
-          {result.targetAmount.toFixed(2)} {result.currency}
+          {result.targetAmount.toFixed(2)}&nbsp;{result.currency}
         </strong>
       </>
     )}

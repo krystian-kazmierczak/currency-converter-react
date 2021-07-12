@@ -16,7 +16,7 @@ const Form = () => {
     const rate = currencies.find(({ shortcut }) => shortcut === currency).rate;
 
     setResult({
-      sourceAmount: +amount,
+      sourceAmount: amount,
       targetAmount: +amount / rate,
       currency,
     });
