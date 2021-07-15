@@ -1,4 +1,4 @@
-import { currencies } from "../../currencies";
+import { currencies } from "./currencies";
 import Buttons from "./Buttons";
 import Button from "./Buttons/Button";
 import Fieldset from "./Fieldset";
