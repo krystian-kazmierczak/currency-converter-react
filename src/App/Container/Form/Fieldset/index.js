@@ -1,12 +1,12 @@
-import "./style.css";
+import { Wrapper, Label} from "./styled";
 
 const Fieldset = ({ label, body }) => (
-    <fieldset className="form__fieldset">
-      <label className="form__label">
+    <Wrapper>
+      <Label >
         <p>{label}</p>
         {body}
-      </label>
-    </fieldset>
+      </Label>
+    </Wrapper>
   );
 
 export default Fieldset;
