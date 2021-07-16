@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import "./style.css";
+import { Paragraph } from "./styled";
+import { useCarrentDate } from "./useCarrentDate";
 
 const Clock = () => {
   const formatDate = (date) => {
@@ -14,18 +14,7 @@ const Clock = () => {
     });
   };
 
-  const [date, setDate] = useState(formatDate(new Date()));
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setDate(formatDate(new Date()));
-    }, 1000);
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
-
-  return <p className="clock">Dzisiaj jest: {date}</p>;
+  return <Paragraph>Dzisiaj jest: {formatDate(useCarrentDate())}</Paragraph>;
 };
 
 export default Clock;
