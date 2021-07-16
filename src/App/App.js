@@ -1,6 +1,6 @@
+import Container from "./Container/styled"
 import Footer from "./Container/Footer";
 import Header from "./Container/Header";
-import Container from "./Container";
 import Form from "./Container/Form";
 import Clock from "./Container/Clock";
 
