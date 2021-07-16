@@ -1,19 +1,17 @@
-import "./style.css";
+import { Field } from "../styled";
 
-const Input = ({amount, setAmount}) => {
-
+const Input = ({ amount, setAmount }) => {
   return (
-    <input
-              className="form__input"
-              placeholder="wpisz kwotę"
-              type="number"
-              min="1"
-              step="any"
-              value={amount}
-              required
-              name="pln"
-              onChange={(event) => setAmount(event.target.value)}
-            />
+    <Field
+      placeholder="wpisz kwotę"
+      type="number"
+      min="0.01"
+      step="any"
+      value={amount}
+      required
+      name="pln"
+      onChange={(event) => setAmount(event.target.value)}
+    />
   );
 };
 

@@ -1,11 +1,10 @@
 import { currencies } from "../currencies";
-import "./style.css";
+import { Field } from "../styled";
 
-const Select = ({currency, setCurrency}) => {
-  
+const Select = ({ currency, setCurrency }) => {
   return (
-    <select
-      className="form__input"
+    <Field
+      as="select"
       value={currency}
       onChange={(event) => setCurrency(event.target.value)}
     >
@@ -14,7 +13,7 @@ const Select = ({currency, setCurrency}) => {
           {currency.name}
         </option>
       ))}
-    </select>
+    </Field>
   );
 };
 

@@ -1,5 +1,5 @@
 import { currencies } from "./currencies";
-import Buttons from "./Buttons";
+import Buttons from "./Buttons/styled";
 import Button from "./Buttons/Button";
 import Fieldset from "./Fieldset";
 import Input from "./Input";
