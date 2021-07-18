@@ -1,11 +1,10 @@
 import { Paragraph } from "./styled";
 
-const Footer = () => (
+const Footer = ({table, date}) => (
   <footer>
     <Paragraph smaller>Pola wymagane oznaczonę są *</Paragraph>
     <Paragraph smaller>
-      Kurs pochodzą z&nbsp;Tabeli NBP nr&nbsp;084/A/NBP/2021 z&nbsp;dnia
-      09.07.2021
+      Kursy pochodzą z&nbsp;tabeli nr&nbsp;{table} z&nbsp;dnia {" "} {date}
     </Paragraph>
     <Paragraph smaller centered>
       &copy; 2021 Krystian Kaźmierczak

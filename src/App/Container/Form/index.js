@@ -1,4 +1,4 @@
-import { currencies } from "./currencies";
+//import { currencies } from "./currencies";
 import Buttons from "./Buttons/styled";
 import Button from "./Buttons/Button";
 import Fieldset from "./Fieldset";
@@ -7,13 +7,13 @@ import Select from "./Select";
 import Result from "./Result";
 import { useState } from "react";
 
-const Form = () => {
-  const [currency, setCurrency] = useState(currencies[0].shortcut);
+const Form = ({ currencies }) => {
+  const [currency, setCurrency] = useState(currencies[7].code);
   const [amount, setAmount] = useState("");
   const [result, setResult] = useState();
 
   const calculateResult = (currency, amount) => {
-    const rate = currencies.find(({ shortcut }) => shortcut === currency).rate;
+    const rate = currencies.find(({ code }) => code === currency).mid;
 
     setResult({
       sourceAmount: amount,
@@ -29,7 +29,7 @@ const Form = () => {
 
   const onFormReset = (event) => {
     event.preventDefault();
-    setCurrency (currencies[0].shortcut);
+    setCurrency(currencies[7].code);
     setAmount("");
     setResult();
   };
@@ -42,7 +42,13 @@ const Form = () => {
       />
       <Fieldset
         label="Waluta docelowa*"
-        body={<Select currency={currency} setCurrency={setCurrency} />}
+        body={
+          <Select
+            currencies={currencies}
+            currency={currency}
+            setCurrency={setCurrency}
+          />
+        }
       />
       <Result result={result} />
       <Buttons>
